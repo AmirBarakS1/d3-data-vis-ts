@@ -11,6 +11,40 @@
 <div class="container">
 </div>
 
+<div class="gGraph-container">
+  <svg>
+    <filter id="redDropshadow" height="150%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncR type="discrete" tableValues="1"/>
+        <feFuncG type="discrete" tableValues="0"/>
+        <feFuncB type="discrete" tableValues="0"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="2"/>
+      <feOffset dx="0" dy="0" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+    </filter>
+    <filter id="purpleDropshadow" height="150%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncR type="discrete" tableValues="0.2"/>
+        <feFuncG type="discrete" tableValues="0"/>
+        <feFuncB type="discrete" tableValues="0.2"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="2"/>
+      <feOffset dx="0" dy="0" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+    </filter>
+    <filter id="grayDropshadow" height="150%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncR type="discrete" tableValues="0.7"/>
+        <feFuncG type="discrete" tableValues="0.7"/>
+        <feFuncB type="discrete" tableValues="0.7"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="2"/>
+      <feOffset dx="0" dy="0" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+    </filter>
+  </svg>
+</div>
 
 
 <script src="data/main.bundle.js"></script>

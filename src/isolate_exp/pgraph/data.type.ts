@@ -6,7 +6,10 @@ export interface PNode {
     id: string;
     type: PType;
     name: string;
-    badgeICClass: string;
+    xIndex?: number;
+    yIndex?: number;
+    leftBadgeICClass?: string;
+    rightBadgeICClass?: string;
     icClass: string;
     strokeColor: string;
     bgColor: string;
@@ -14,8 +17,8 @@ export interface PNode {
 }
 export interface PLink {
     id: string;
-    source: string;
-    target: string;
+    source: { xIndex: number, yIndex: number };
+    target: { xIndex: number, yIndex: number };
     type: PType;
 }
 export interface PGraph {
